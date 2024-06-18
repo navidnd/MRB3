@@ -18,7 +18,9 @@ def createplan(request):
 
 def plans(request):
     mainsPlan_list = mainPlanInfo.objects.all()
-    return HttpResponse (mainsPlan_list)
+    pass
+
+
 def createplan(request):
     pass
 
