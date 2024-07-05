@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users import views as user_views
+from django.contrib.auth import views as authentication_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/',include('users.urls')),
     path('plans/',include('plans.urls')),
+    path('api/', include('rest_framework.urls')),
+    path('login/', authentication_views.LoginView.as_view(), name='login'),
+    path('logout/', authentication_views.LogoutView.as_view(), name='logout'),
+
 ]

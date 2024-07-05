@@ -10,5 +10,8 @@ urlpatterns = [
     #edite
     path('update/<int:id>/',views.update_plan, name='update_plan'),
     
+    #delete
+    path('delete/<int:id>/' ,views.delete_plan, name='delete_plan'),
+    
 
 ]
